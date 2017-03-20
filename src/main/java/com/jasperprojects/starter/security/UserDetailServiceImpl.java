@@ -12,26 +12,26 @@ package com.jasperprojects.starter.security;
 
 import com.jasperprojects.starter.domain.User;
 import com.jasperprojects.starter.repository.UserRepository;
+import com.jasperprojects.starter.security.UserNotActivatedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
 @Component("userDetailsService")
 public class UserDetailServiceImpl implements UserDetailsService {
 
-    
     private UserRepository userRepo;
-    
+
     @Autowired
     public UserDetailServiceImpl(UserRepository userRepo) {
         this.userRepo = userRepo;
     }
 
-    
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username)

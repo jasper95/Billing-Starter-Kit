@@ -23,4 +23,6 @@ dist/
 nbdist/
 .nb-gradle/
 
-src/main/resources/static/vendor
+### Node and Bower ###
+src/main/resources/static/vendor/
+node_modules/

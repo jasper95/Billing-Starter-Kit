@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Spring Security Example</title>
-</head>
-<body>
-<h1>Welcome!</h1>
+    <head>
+        <title>Spring Security Example</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
 
-<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
-</body>
+        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+        <table id="entrys_table" class="table table-striped" width="100%">
+            <thead>
+            <tr>
+                <th>Fullname</th>
+                <th>Username</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+        </table>
+        <script type="text/javascript" th:src="@{/js/require.config.js}"></script>
+        <script type="text/javascript" th:src="@{/vendor/requirejs/require.js}"></script>
+        <script type="text/javascript" th:src="@{/js/test.js}"></script>
+    </body>
 </html>

@@ -16,9 +16,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    public WebSecurityConfig(UserDetailsService userDetailsService){
+        this.userDetailsService = userDetailsService;
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -37,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-            .antMatchers("/", "/home")
+            .antMatchers("/", "/home", "/vendor/**", "/js/**", "/css/**", "/api/**")
                 .permitAll()
             .anyRequest()
                 .authenticated()
