@@ -27,6 +27,7 @@ public class UserDTO extends AuditableEntityDTO {
         super(user);
         this.id = user.getId();
         this.fullName = user.getFullName();
+        this.username = user.getUsername();
         this.status = user.getStatus();
         this.type = user.getType();
         this.roles = user.getRoles().stream()
