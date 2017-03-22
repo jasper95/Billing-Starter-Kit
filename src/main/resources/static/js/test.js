@@ -1,16 +1,21 @@
-require(['jquery', 'css!bootstrap-css', 'css!datatables.net-bs-css', 'datatables.net-bs', 'yadcf'], function(){
+require(['css!datatables.net-css', 'css!datatables.net-responsive-css', 'datatables.net-responsive', 'yadcf'], function(){
     'use strict';
     var table = $('#entrys_table').DataTable({
+        "deferLoading" : 0,
+        "responsive" : true,
         "serverSide": true,
         "processing": true,
         "paging": true,
         "ajax": "/api/data-tables/users",
         "columns": [{
-            "data": "fullName"
+            "data": "fullName",
+            "title": "Fullname"
         }, {
-            "data": "username"
+            "data": "username",
+            "title": "Username"
         }, {
-            "data": "type"
+            "data": "type",
+            "title": "Type"
         }]
     });
     var type_filters = [{
@@ -26,7 +31,7 @@ require(['jquery', 'css!bootstrap-css', 'css!datatables.net-bs-css', 'datatables
         value : "REPORTS_VIEWER",
         label : "Reports Viewer"
     }
-    ]
+    ];
     yadcf.init(table,[{
         "externally_triggered": true,
         column_number: 0,

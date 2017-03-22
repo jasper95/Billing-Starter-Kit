@@ -5,13 +5,15 @@
         window.require = config;
     }
 })({
+    deps: ['bootstrap'],
     paths: {
         'jquery': "../vendor/jquery/dist/jquery.min",
         'bootstrap': "../vendor/bootstrap/dist/js/bootstrap.min",
         'bootstrap-css': "../vendor/bootstrap/dist/css/bootstrap.min",
         "datatables.net": "../vendor/datatables.net/js/jquery.dataTables.min",
-        "datatables.net-bs": "../vendor/datatables.net-bs/js/dataTables.bootstrap.min",
-        'datatables.net-bs-css' : "../vendor/datatables.net-bs/css/dataTables.bootstrap.min",
+        'datatables.net-css' : "../vendor/datatables.net-dt/css/jquery.dataTables.min",
+        "datatables.net-responsive": "../vendor/datatables.net-responsive/js/dataTables.responsive.min",
+        "datatables.net-responsive-css": "../vendor/datatables.net-responsive-dt/css/responsive.dataTables.min",
         'yadcf-css': "../vendor/yadcf/jquery.dataTables.yadcf",
         'yadcf': "../vendor/yadcf/jquery.dataTables.yadcf"
     },

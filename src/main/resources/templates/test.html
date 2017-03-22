@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      th:include="base :: page">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div th:fragment="content">
+            my page content
+        </div>
+        <th:block th:fragment="js-block">
+            <script type="text/javascript" th:src="@{/js/require.config.js}"></script>
+            <script type="text/javascript" th:src="@{/vendor/requirejs/require.js}"></script>
+        </th:block>
+    </body>
+</html>

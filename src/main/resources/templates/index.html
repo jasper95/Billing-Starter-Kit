@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      th:include="base :: page">
     <head>
-        <title>Spring Security Example</title>
+        <title th:fragment="title">Spring Security Example</title>
     </head>
     <body>
-        <h1>Welcome!</h1>
-
-        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
-        <div id="f_full_name"></div>
-        <div id="f_username"></div>
-        <div id="f_type"></div>
-        <a id="filterClearButton" type="button" class="btn btn-danger">Reset</a>
-        <a id="filterButton" type="button" class="btn btn-primary">Filter</a>
-        <table id="entrys_table" class="table table-striped" width="100%">
-            <thead>
-            <tr>
-                <th>Fullname</th>
-                <th>Username</th>
-                <th>Type</th>
-            </tr>
-            </thead>
-        </table>
-        <script type="text/javascript" th:src="@{/js/require.config.js}"></script>
-        <script type="text/javascript" th:src="@{/vendor/requirejs/require.js}"></script>
-        <script type="text/javascript" th:src="@{/js/test.js}"></script>
+        <th:block th:fragment="content">
+            <h1>Welcome!</h1>
+            <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+            <div id="f_full_name"></div>
+            <div id="f_username"></div>
+            <div id="f_type"></div>
+            <a id="filterClearButton" type="button" class="btn btn-danger">Reset</a>
+            <a id="filterButton" type="button" class="btn btn-primary">Filter</a>
+            <table id="entrys_table" class="display dt-responsive" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+            </table>
+        </th:block>
+        <th:block th:fragment="js-block">
+            <script type="text/javascript" th:src="@{/js/require.config.js}"></script>
+            <script type="text/javascript" th:src="@{/vendor/requirejs/require.js}"></script>
+            <script type="text/javascript" th:src="@{/js/test.js}"></script>
+        </th:block>
     </body>
 </html>
