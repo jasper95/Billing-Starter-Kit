@@ -15,7 +15,9 @@
         "datatables.net-responsive": "../vendor/datatables.net-responsive/js/dataTables.responsive.min",
         "datatables.net-responsive-css": "../vendor/datatables.net-responsive-dt/css/responsive.dataTables.min",
         'yadcf-css': "../vendor/yadcf/jquery.dataTables.yadcf",
-        'yadcf': "../vendor/yadcf/jquery.dataTables.yadcf"
+        'yadcf': "../vendor/yadcf/jquery.dataTables.yadcf",
+        'stapes': '../vendor/stapes/stapes.min',
+        'mustache': '../vendor/mustache.js/mustache.min'
     },
     map: {
         '*': {

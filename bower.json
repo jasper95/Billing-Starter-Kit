@@ -24,6 +24,8 @@
     "requirejs": "^2.3.3",
     "require-css": "^0.1.10",
     "datatables.net-responsive": "^2.1.1",
-    "datatables.net-responsive-dt": "^2.1.1"
+    "datatables.net-responsive-dt": "^2.1.1",
+    "mustache.js": "mustache#^2.3.0",
+    "stapes": "^1.0.0"
   }
 }

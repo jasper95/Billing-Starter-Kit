@@ -2,15 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       th:include="base :: page">
     <head>
-        <title></title>
+        <title>TODOs</title>
     </head>
     <body>
         <div th:fragment="content">
-            my page content
+            <form id="inputform">
+                <input type="text" placeholder="Add a new todo..." />
+            </form>
+
+            <h1>my todos</h1>
+            <div id="todos">
+                <ul></ul>
+            </div>
         </div>
         <th:block th:fragment="js-block">
+            <script type="x-tmpl-mustache" id="template">
+                <ul>
+                    {{#todos}}
+                    <li data-id="{{id}}">
+                        <input type="checkbox" class="remove" />
+                        {{text}}
+                    </li>
+                    {{/todos}}
+                </ul>
+
+                <p>{{size}} todos left</p>
+            </script>
             <script type="text/javascript" th:src="@{/js/require.config.js}"></script>
             <script type="text/javascript" th:src="@{/vendor/requirejs/require.js}"></script>
+            <script type="text/javascript" th:src="@{/js/todo.js}"></script>
         </th:block>
     </body>
 </html>
