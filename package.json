@@ -16,7 +16,6 @@
   },
   "homepage": "https://github.com/jasper95/Billing-Starter-Kit#readme",
   "dependencies": {
-    "bower": "^1.8.0",
-    "bower-requirejs": "^1.2.0"
+    "bower": "^1.8.0"
   }
 }
